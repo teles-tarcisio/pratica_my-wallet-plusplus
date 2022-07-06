@@ -6,13 +6,6 @@ export async function getUsersByEmail(email) {
     [email]
   );
 
-  if (existingUsers.rowCount > 0) {
-    throw {
-      type: "conflict",
-      message: "Email already registered.",
-    }
-  }
-
   return existingUsers;
 }
 
