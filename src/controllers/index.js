@@ -1,7 +1,8 @@
 import * as authController from "./authController.js";
 
-// import financialController from ...
+import * as financialController from "./financialController.js";
 
 export {
   authController,
+  financialController,
 }

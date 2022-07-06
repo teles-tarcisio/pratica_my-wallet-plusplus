@@ -12,5 +12,9 @@ export default async function errorHandler(error, req, res, next) {
     return res.status(422).send(error.message);
   }
 
+  if (error.type === "unauthorized") {
+    return res.status(401).send(error.message);
+  }
+  
   return res.status(500).send("Internal Server Error");
 }
